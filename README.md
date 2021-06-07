@@ -33,7 +33,6 @@ To train the super-BERTs in the paper, run this command:
 python train_superbert.py --cfg /path_to_superbert_training_config/config.yaml
 ```
 
->📋  We release all super-BERTs traning configs in this repo.  
 
 ## Searching
 
@@ -43,7 +42,6 @@ To search the optimal sub-BERTs given any constraints in the paper, run this com
 python search_subbert.py --cfg /path_to_subbert_searching_config/config.yaml
 ```
 
->📋  We release all sub-BERTs searching configs in this repo.  
 
 ## Evaluation
 
