@@ -24,17 +24,17 @@ logger.setLevel(logging.DEBUG) #日志等级为DEBUG
 
 
 # dir config
-_C.data_dir = "/userhome/zhangshaokun/bertnas/glue_data/MRPC"
+_C.data_dir = "glue_data/MRPC"
 
-_C.flops_dataset_save_path =  "/userhome/zhangshaokun/bertnas/experiment/flopsdataset"
+_C.flops_dataset_save_path =  "experiment/flopsdataset"
 
-_C.output_dir = "/userhome/zhangshaokun/bertnas/experiment/MRPC/supermodeltrain/test32"
+_C.output_dir = "experiment/MRPC/supermodeltrain/test32"
 
-_C.predictor_save_path = "/userhome/zhangshaokun/test_code/theuse/saved_model/tmp.pt"
+_C.predictor_save_path = "tmp.pt"
 
-_C.save_flops_dataset_path = "/userhome/zhangshaokun/bertnas/experiment/generateflops"
+_C.save_flops_dataset_path = "experiment/generateflops"
 
-_C.save_predictor_path =  "/userhome/zhangshaokun/bertnas/experiment/saved_predictor"
+_C.save_predictor_path =  "experiment/saved_predictor"
 
 _C.cache_dir = ""
 
@@ -178,11 +178,11 @@ _C.student_sample_config = "default"
 
 _C.model_name_or_path = "bert-base-uncased"
 
-_C.teacher_model = "/userhome/zhangshaokun/test_code/theuse/experiment/MRPC/default"
+_C.teacher_model = "experiment/MRPC/default"
 
 _C.teacher_model_sample_config = "default"
 
-_C.super_model = "/userhome/zhangshaokun/bertnas/experiment/MRPC/supermodeltrain/test31"
+_C.super_model = "experiment/MRPC/supermodeltrain/test31"
 
 _C.super_lr_schedule = "linear"
 
