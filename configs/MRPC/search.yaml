@@ -1,0 +1,85 @@
+# dir config
+data_dir: "/glue_data/MRPC" # The input data dir. Should contain the .tsv files (or other data files) for the task.
+
+output_dir: "/outputdir/" # The output directory where the model predictions and checkpoints will be written.
+
+cache_dir: "" # Where do you want to store the pre-trained models downloaded from s3
+
+# task config
+do_train: True # Whether to run training
+
+do_eval: True # Whether to run eval on the dev set.
+
+evaluate_during_training: True # Rul evaluation during training at each logging step
+
+do_lower_case: True # Set this flag if you are using an uncased model
+
+task_name: "MRPC" # The name of the task
+
+max_seq_length: 128 #The maximum total input sequence length after tokenization. Sequences longerthan this will be truncated, sequences shorter will be padded
+
+# model config
+model_type: "bert" # model type
+
+config_name: "" # Pretrained config name or path if not the same as model_name
+
+tokenizer_name: "" # Pretrained tokenizer name or path if not the same as model_name
+
+# train/eval config
+per_gpu_train_batch_size: 8 # Batch size per GPU/CPU for training
+
+per_gpu_eval_batch_size: 8 # Batch size per GPU/CPU for evaluation
+
+gradient_accumulation_steps: 1 # Number of updates steps to accumulate before performing a backward/update pass
+
+# optimizer config
+weight_decay: 0.0 # Weight deay if we apply some
+
+adam_epsilon: 1e-8 # Epsilon for Adam optimizer
+
+max_grad_norm: 1.0 # Max gradient norm
+
+num_train_epochs: 20.0 # Total number of training epochs to perform
+
+max_steps: -1 # If > 0: set total number of training steps to perform. Override num_train_epochs.
+
+warmup_steps: 0 # Linear warmup over warmup_steps.
+
+# other config
+logging_steps: 50 # Log every X updates steps.
+
+save_steps: 50 # Save checkpoint every X updates steps
+
+eval_all_checkpoints: False # Evaluate all checkpoints starting with the same prefix as model_name ending and ending with step number
+
+no_cuda: False # Avoid using CUDA when available
+
+overwrite_output_dir: True # Overwrite the content of the output directory
+
+overwrite_cache: False # Overwrite the cached training and evaluation sets
+
+seed: 2 # random seed for initialization
+
+fp16: False # Whether to use 16-bit (mixed) precision (through NVIDIA apex) instead of 32-bit
+
+fp16_opt_level: "01" # fp16_opt_level
+
+local_rank: -1 # local_rank
+
+search_model_path : "/searchpath/"
+
+flops_constraint : 5000000000
+
+feature_norm : [7.002, 641.024, 1120.35264, 7.98982333]
+
+flops_norm : 6555246849
+
+constraint_model : 'para'
+
+para_constraint : 66955008
+
+evo_log : "mrpc_search"
+
+pown : 2.0
+
+rs_search_step : 1000.0
